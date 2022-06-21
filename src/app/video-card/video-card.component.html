@@ -1,19 +1,16 @@
-<div>
+<div class="video-card">
     <img [src]="thumbnail" [alt]="title">
-    <h3>{{ title }}</h3>
 
     <a class="over-link" [href]="src"></a>
 
-    <div>{{ nbOfViews }}</div>
+    <img class="channel-img" [src]="channel.img" [alt]="channel.name">
 
-    <div>{{ date }}</div>
+    <div class="info-wrap">
+        <h3>{{ title }}</h3>
+        <a [href]="channel.link">{{ channel.name }}</a>
+        <p><span>{{ nbOfViews }} Views</span> . <span> There is {{ thereIs }}</span></p>        
+    </div>
 
-    <div>{{ isLive }}</div>
-
-    <div>{{ channel.img }}</div>
-
-    <div>{{ channel.name }}</div>
-
-    <div>{{ channel.link }}</div>
+    <div *ngIf="isLive">Live</div>
 
 </div>

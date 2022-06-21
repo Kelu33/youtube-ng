@@ -1,3 +1,10 @@
-h1 {
-    color: var(--text-color);
+div {
+    display: flex;
+}
+
+section {
+    width: calc(100vw - 250px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
 }

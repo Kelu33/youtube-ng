@@ -12,7 +12,7 @@ export const CHANNELS: Channel[] = [
             'Joueur du grenier ( Hors-série) - RESIDENT EVIL',
             'https://www.youtube.com/watch?v=V7lHNwP3pes',
             301,
-            new Date(2018, 11, 24),
+            new Date('6/21/2021'),
             false
         ),
         new Video(
@@ -20,8 +20,8 @@ export const CHANNELS: Channel[] = [
             'Joueur du grenier - CASTLEVANIA',
             'https://www.youtube.com/watch?v=Cpke7ZnJJvA',
             301,
-            new Date(2018, 11, 24),
-            false
+            new Date('10/25/2017'),
+            true
         )
     ]
     ),
@@ -35,7 +35,7 @@ export const CHANNELS: Channel[] = [
             '',
             '',
             0,
-            new Date(2018, 11, 24),
+            new Date(),
             false
         ),
         new Video(
@@ -43,7 +43,7 @@ export const CHANNELS: Channel[] = [
             '',
             '',
             0,
-            new Date(2018, 11, 24),
+            new Date(),
             false
         ),
             

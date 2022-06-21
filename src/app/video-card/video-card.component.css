@@ -1,6 +1,9 @@
-div {
+.video-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     position: relative;
-    width: 250px;
+    width: 25%;
 }
 
 .over-link {
@@ -11,3 +14,15 @@ div {
     height: 100%;
 }
 
+img {
+    width: 100%;
+}
+
+.channel-img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.info-wrap {
+    width: 70%;
+}

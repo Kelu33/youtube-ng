@@ -10,7 +10,6 @@ import { Video } from 'src/models/video.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'youtube-ng';
 
   channels: Channel[] = CHANNELS;
 

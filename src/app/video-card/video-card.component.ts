@@ -27,11 +27,28 @@ export class VideoCardComponent implements OnInit {
   isLive!: boolean;
 
   @Input()
-  channel!: Channel;
+  channel!: Channel;  
+
+  thereIs: number | string = 0;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.formatThereIs();    
+  }
+
+  formatThereIs(): void {
+    let days: number = new Date().getTime() - this.date.getTime();
+    days = Math.ceil(days / (1000*60*60*24));
+    if (days > 365)  {
+      days = Math.floor(days/365);
+      if (days === 1) this.thereIs = days.toString() + ' year';
+      else this.thereIs = days.toString() + ' years';
+    }
+    else {
+      if (days === 1 ) this.thereIs += ' day';
+      else this.thereIs += ' days';
+    }
   }
 
 }
