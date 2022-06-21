@@ -1,9 +1,8 @@
 <app-header></app-header>
 
-<div>
+<main>
     <app-side-bar></app-side-bar>
-    
-    <section>
+    <section>    
         <app-video-card *ngFor="let video of videos"
         [thumbnail]="video.thumbnail"
         [title]="video.title"
@@ -14,4 +13,4 @@
         [channel]="video.channel">
         </app-video-card>
     </section>
-</div>
+</main>

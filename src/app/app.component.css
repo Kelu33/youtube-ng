@@ -1,10 +1,7 @@
-div {
+section, main {
     display: flex;
 }
 
 section {
-    width: calc(100vw - 250px);
-    display: flex;
     flex-wrap: wrap;
-    padding: 8px;
 }
