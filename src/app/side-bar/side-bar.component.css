@@ -1,5 +1,0 @@
-div {
-    background-color: var(--dark-bg-color);
-    width: 250px;
-    min-height: calc(100vh - 120px);
-}

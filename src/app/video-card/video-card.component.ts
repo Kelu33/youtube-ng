@@ -9,25 +9,25 @@ import { Channel } from 'src/models/channel.model';
 export class VideoCardComponent implements OnInit {
   
   @Input()
-  thumbnail!: string;
+  thumbnail: string = '';
   
   @Input()
-  title!: string;
+  title: string = '';
 
   @Input()
-  src!: string;
+  src: string = '';
 
   @Input()
-  nbOfViews!: number;
+  nbOfViews: number = 0;
 
   @Input()
-  date!: Date;
+  date: Date = new Date();
 
   @Input()
-  isLive!: boolean;
+  isLive: boolean = false;
 
   @Input()
-  channel!: Channel;  
+  channel: Channel = new Channel('','','',[]);  
 
   thereIs: number | string = 0;
 
