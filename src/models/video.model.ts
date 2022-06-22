@@ -8,6 +8,7 @@ export class Video {
         public nbOfViews: number,
         public date: Date,
         public isLive: boolean,
+        public type: string,
         public channel: Channel = new Channel('','','',[])
     ) {}
 }

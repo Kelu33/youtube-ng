@@ -5,4 +5,30 @@
 .videos-wrap {
     display: flex;
     flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0 0 12px;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
+
+.video-wrap {
+    width: calc(25% - 12px);
+}
+
+@media (max-width: 1200px) { 
+    .video-wrap {
+        width: calc(33% - 12px);        
+    }
+ }
+
+ @media (max-width: 960px) { 
+    .video-wrap {
+        width: calc(50% - 12px);        
+    }
+ }
+
+ @media (max-width: 500px) { 
+    .video-wrap {
+        width: calc(100% - 12px);        
+    }
+ }

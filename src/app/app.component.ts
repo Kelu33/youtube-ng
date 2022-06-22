@@ -15,4 +15,5 @@ export class AppComponent {
 
   videos: Video[] = this.channels.map( c => c.videos.filter( v => v.channel = c) ).flat(1);
 
+  types: string[] = [...new Set(this.videos.map( v => v.type))];
 }

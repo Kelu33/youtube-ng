@@ -1,11 +1,15 @@
-
+<app-header
+[types]="types"
+></app-header>
 
 <div class="main">
 
-    <app-side-bar></app-side-bar>
+    <app-side-bar class="side-bar"
+    [channels]="channels"    
+    ></app-side-bar>
 
     <div class="videos-wrap">
-        <app-video-card class="test" *ngFor="let video of videos"
+        <app-video-card class="video-wrap" *ngFor="let video of videos"
             [thumbnail]="video.thumbnail"
             [title]="video.title"
             [src]="video.src"

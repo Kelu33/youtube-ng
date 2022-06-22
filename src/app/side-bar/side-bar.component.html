@@ -1,1 +1,8 @@
-<div><h2>side bar</h2></div>
+<div class="side-bar">
+    <h2>Subscription :</h2>
+    <div class="channel-wrap" *ngFor="let channel of channels">
+        <img [src]="channel.img" [alt]="channel.name">
+        <a [href]="channel.link"></a>
+        <p>{{ channel.name }}</p>
+    </div>
+</div>
