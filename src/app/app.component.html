@@ -1,9 +1,18 @@
-<app-video-card *ngFor="let video of videos"
-[thumbnail]="video.thumbnail"
-[title]="video.title"
-[src]="video.src"
-[nbOfViews]="video.nbOfViews"
-[date]="video.date"
-[isLive]="video.isLive"
-[channel]="video.channel">
-</app-video-card>
+
+
+<div class="main">
+
+    <app-side-bar></app-side-bar>
+
+    <div class="videos-wrap">
+        <app-video-card class="test" *ngFor="let video of videos"
+            [thumbnail]="video.thumbnail"
+            [title]="video.title"
+            [src]="video.src"
+            [nbOfViews]="video.nbOfViews"
+            [date]="video.date"
+            [isLive]="video.isLive"
+            [channel]="video.channel">
+        </app-video-card>
+    </div>
+</div>

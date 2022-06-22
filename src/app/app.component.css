@@ -1,7 +1,8 @@
-section, main {
+.main {
     display: flex;
 }
 
-section {
+.videos-wrap {
+    display: flex;
     flex-wrap: wrap;
 }
