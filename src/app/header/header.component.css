@@ -1,7 +1,7 @@
 div {
     width: 100%;
     height: 120px;
-    background-color: var(--dark-bg-color);
+    background-color: var(--bg-color);
     display: flex;
 }
 
@@ -24,21 +24,36 @@ nav {
     border-bottom: 1px solid var(--border-color);
 }
 
-button {
+input {
     background-color: var(--dark-bg-color);
     border: 1px solid var(--border-color);
-    padding: 0.3rem;
-}
-
-input {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
+    border-radius: 3px;
     padding: 0.4rem;
     width: 33%;
+    height: 25px;
+    z-index: 9;
+}
+
+button {
+    border: 0;
+    background-color: var(--light-bg-color);
+    padding: 0.2rem 1rem;
+}
+
+.submit-button {
+    font-size: x-large;
+}
+
+.submit-button span {
+    display: block;
+    transform: rotate(-45deg);
 }
 
 .pill-button {
+    padding: 0.6rem 1rem;
     border-radius: 500px;
+    margin: 8px;
+    font-weight: bold;
 }
 
 .logo-wrap {
@@ -49,4 +64,17 @@ img {
     align-self: center;
     margin-left: calc(50% - 12px);
     width: 50%;
+    z-index: 9;
 }
+
+@media (max-width: 960px) {
+    .logo-wrap {
+        width: 64px;
+    }
+    img {
+        width: 200%
+    }
+    .nav-wrap {
+        width: 100%;
+    }
+ }

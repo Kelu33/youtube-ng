@@ -1,5 +1,16 @@
 <div class="side-bar">
-    <h2>Subscription :</h2>
+    <ul>
+        <li>&#x2600; <span>UN</span></li>
+        <li>&#x2601; <span>MENU</span></li>
+        <li>&#x2602; <span>AU</span></li>
+        <li>&#x2603; <span>PIF</span></li>
+    </ul>
+    <ul>
+        <li>&#x260F; <span>FOO</span></li>
+        <li>&#x2622; <span>BAR</span></li>
+        <li>&#x2623; <span>BAZ</span></li>
+    </ul>
+    <h2>SUBSCRIPTIONS</h2>
     <div class="channel-wrap" *ngFor="let channel of channels">
         <img [src]="channel.img" [alt]="channel.name">
         <a [href]="channel.link"></a>

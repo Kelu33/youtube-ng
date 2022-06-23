@@ -6,19 +6,28 @@ img {
 
 .channel-img {
     width: 10%;
-    margin: 8px;
+    margin-top: 8px;
     border-radius: 50%;
 }
 
 .info-wrap {
-    margin: calc(-10% - 16px) 0 0 calc(10% + 16px);
+    margin: calc(-10% - 8px) 0 64px calc(10% + 16px);
+}
+
+h3 {
+    margin-bottom: 4px;
 }
 
 .live-alert {
     background-color: brown;
-    width: fit-content;
     padding: 0.4em;
     border-radius: 8px;
+    align-self: flex-end;
+}
+
+.views-wrap {
+    display: flex;
+    justify-content: space-between;
 }
 
 .over-link {

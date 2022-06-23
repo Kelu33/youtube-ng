@@ -29,7 +29,7 @@ export const CHANNELS: Channel[] = [
     ),
     new Channel(
         'Mickaël Launay',
-        'https://yt3.ggpht.com/ytc/AKedOLTX1suKh2H0NYY5N4Kj_wDIylqaKeV6zJ4_qcl8cA=s176-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLTX1suKh2H0NYY5N4Kj_wDIylqaKeV6zJ4_qcl8cA=s88-c-k-c0x00ffffff-no-rj',
         'https://www.youtube.com/c/Micmaths', 
     [ 
         new Video(
@@ -62,25 +62,25 @@ export const CHANNELS: Channel[] = [
             'M.I.A. - Paper Planes',
             'https://www.youtube.com/watch?v=ewRjZoRtu0Y',
             301,
-            new Date(),
+            new Date('2/3/2009'),
             false,
             'Music'
         ),
         new Video(
-            '',
-            '',
-            '',
+            'https://i.ytimg.com/vi/r-Nw7HbaeWY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCXPEC6sHmmigvlb7uK3QoVcuZuHg',
+            'M.I.A. - Borders',
+            'https://www.youtube.com/watch?v=r-Nw7HbaeWY',
             301,
-            new Date(),
+            new Date('2/11/2016'),
             false,
             'Music'
         ),
         new Video(
-            '',
-            '',
-            '',
+            'https://i.ytimg.com/vi/3Yuqxl284cg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7kWgXoD9y39pJoPXSB9qJvq61kg',
+            'M.I.A. - Bad Girls',
+            'https://www.youtube.com/watch?v=3Yuqxl284cg',
             301,
-            new Date(),
+            new Date('2/11/2012'),
             false,
             'Music'
         )

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { CHANNELS } from './channels-list';
 import { Channel } from 'src/models/channel.model';
@@ -17,6 +17,10 @@ export class AppComponent {
 
   types: string[] = [...new Set(this.videos.map( v => v.type))];
 
+  ngOnInit(): void { 
+    this.videos = this.shuffleArray(this.videos); 
+  }
+
   onType($event: string): void {
     this.videos = this.extractVideos(this.channels);
     this.videos = this.videos.filter( v => v.type.toLowerCase().includes($event.toLowerCase()));
@@ -30,4 +34,17 @@ export class AppComponent {
   extractVideos(ChannelArray: Channel[]): Video[] {
     return ChannelArray.map( c => c.videos.filter( v => v.channel = c) ).flat(1);
   }
+
+  shuffleArray(array: Video[]): Video[] {
+    let shuffled: Video[] = [];
+    for (let element of array) {
+      shuffled.splice(this.getRandomArbitrary(0, shuffled.length + 1), 0, element);
+    }
+    return shuffled;
+  }
+
+  getRandomArbitrary(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
 }

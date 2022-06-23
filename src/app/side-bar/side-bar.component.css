@@ -1,19 +1,31 @@
 .side-bar {
-    background-color: var(--dark-bg-color);
+    background-color: var(--bg-color);
     width: 250px;
-    margin-top: -60px;
-    min-height: calc(100vh - 60px);
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 0;
 }
 
 img {
-    width: 5vw;
+    width: 32px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 .channel-wrap {
     display: flex;
     align-items: center;
     position: relative;
+}
+
+h2, .channel-wrap, li {
+    margin: 1.2rem 32px;
+}
+
+ul {
+    border-bottom: 1px solid var(--border-color);
+    width: calc(100% - 16px);
 }
 
 a {
@@ -24,12 +36,22 @@ a {
     height: 100%;
 }
 
+span {
+    margin-left: 8px;
+}
+
 
 @media (max-width: 960px) { 
     .side-bar {
-        width: 10vw;        
+        width: 64px;        
     }
-    p {
+    .channel-wrap {
+        margin-left: 16px;
+    }
+    p, h2, span {
         display: none;
+    }
+    li {
+        transform: translateX(-8px);
     }
  }

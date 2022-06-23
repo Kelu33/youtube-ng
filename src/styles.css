@@ -49,14 +49,17 @@ table {
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --bg-color: #181818;
-    --dark-bg-color: #212121;
+    --dark-bg-color: #181818;
+    --bg-color: #212121;
+    --light-bg-color: hsl(0, 0%, 18.82%);;
     --text-color: #fff;
     --border-color: hsla(0, 0%, 53.3%, 0.4);
 }
 
 body {
-    background-color: var(--bg-color);
+	position: relative;
+    background-color: var(--dark-bg-color);
+	min-height: 100vh;
 }
 
 * {

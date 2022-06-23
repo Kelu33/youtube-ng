@@ -34,7 +34,7 @@ export class VideoCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { 
-    this.formatThereIs();    
+    this.formatThereIs(); 
   }
 
   formatThereIs(): void {
@@ -42,8 +42,9 @@ export class VideoCardComponent implements OnInit {
     days = Math.ceil(days / (1000*60*60*24));
     if (days > 365)  {
       let year: number = Math.floor(days/365);
-      if (days === 1) this.thereIs = year.toString() + ' year';
+      if (year === 1) this.thereIs = year.toString() + ' year';
       else this.thereIs = year.toString() + ' years';
+
     } else {
       if (days === 1 ) this.thereIs = days.toString() + ' day';
       else this.thereIs = days.toString() + ' days';

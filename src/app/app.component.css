@@ -1,8 +1,5 @@
-.main {
-    display: flex;
-}
-
 .videos-wrap {
+    margin-left: 250px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -15,13 +12,16 @@
     width: calc(25% - 12px);
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) {
     .video-wrap {
         width: calc(33% - 12px);        
     }
  }
 
  @media (max-width: 960px) { 
+    .videos-wrap {
+        margin-left: 64px;
+    }
     .video-wrap {
         width: calc(50% - 12px);        
     }
