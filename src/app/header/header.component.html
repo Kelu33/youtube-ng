@@ -4,12 +4,16 @@
     </div>
     <div class="nav-wrap">
         <nav>
-            <input type="text" placeholder="Search">
+            <input
+            (input)="sendSearchQuery(input)"
+            [(ngModel)]="input"
+            type="text" placeholder="Search">
             <button>🔎</button>
         </nav>
         <nav>
-            <button
-            *ngFor="let type of types" class="pill-button">{{ type }}</button>
+            <button (click)="sendType(type)"
+                *ngFor="let type of types" class="pill-button">{{ type }}
+            </button>
         </nav>
     </div>
 </div>
