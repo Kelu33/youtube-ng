@@ -29,7 +29,7 @@ export class VideoCardComponent implements OnInit {
   @Input()
   channel: Channel = new Channel('','','',[]);  
 
-  thereIs: number | string = 0;
+  thereIs: string = '';
 
   constructor() { }
 
@@ -41,13 +41,12 @@ export class VideoCardComponent implements OnInit {
     let days: number = new Date().getTime() - this.date.getTime();
     days = Math.ceil(days / (1000*60*60*24));
     if (days > 365)  {
-      days = Math.floor(days/365);
-      if (days === 1) this.thereIs = days.toString() + ' year';
-      else this.thereIs = days.toString() + ' years';
-    }
-    else {
-      if (days === 1 ) this.thereIs += ' day';
-      else this.thereIs += ' days';
+      let year: number = Math.floor(days/365);
+      if (days === 1) this.thereIs = year.toString() + ' year';
+      else this.thereIs = year.toString() + ' years';
+    } else {
+      if (days === 1 ) this.thereIs = days.toString() + ' day';
+      else this.thereIs = days.toString() + ' days';
     }
   }
 
