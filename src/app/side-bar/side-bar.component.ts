@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Channel } from 'src/models/channel.model';
 
 @Component({
@@ -10,15 +10,27 @@ export class SideBarComponent implements OnInit {
 
   @Input() channels: Channel[] = [];
 
+  @Output() onRouteChange: EventEmitter<string> = new EventEmitter(); 
+
   constructor() { }
 
   ngOnInit(): void {
-    // src: https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
-    // author: Eydrian
+    this.getChannelsSet();    
+  }
+
+  sendChannelRoute(route: string): void {
+    this.onRouteChange.emit(route);
+  }
+  
+  // !TODO create global function
+  // Remove duplicates Objects in array :
+  // src: https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
+  // author: Eydrian
+  getChannelsSet(): void {
     this.channels = this.channels.filter((value, index, self) =>
-    index === self.findIndex((t) => (
-      t.name === value.name
-    ))
-  )
+      index === self.findIndex((t) => (
+        t.name === value.name
+      ))
+    )
   }
 }

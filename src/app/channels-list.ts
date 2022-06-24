@@ -5,7 +5,7 @@ export const CHANNELS: Channel[] = [
     new Channel(
         'Joueur Du Grenier',
         'https://yt3.ggpht.com/ytc/AKedOLSWR1xukO50JE75bCYQsJWt9MAKaE3rplxdauP6=s176-c-k-c0x00ffffff-no-rj',
-        'https://www.youtube.com/user/joueurdugrenier/videos', 
+        'joueurdugrenier', 
     [ 
         new Video(
             'https://i.ytimg.com/vi/V7lHNwP3pes/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDx-OTmYGYeZWsXFrt79OBHV5MfJw',
@@ -30,7 +30,7 @@ export const CHANNELS: Channel[] = [
     new Channel(
         'Mickaël Launay',
         'https://yt3.ggpht.com/ytc/AKedOLTX1suKh2H0NYY5N4Kj_wDIylqaKeV6zJ4_qcl8cA=s88-c-k-c0x00ffffff-no-rj',
-        'https://www.youtube.com/c/Micmaths', 
+        'Micmaths', 
     [ 
         new Video(
             'https://i.ytimg.com/vi/8D_ThIqoJL8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsYJBX7ORf10071OsDCWyvwYDsqw',
@@ -55,7 +55,7 @@ export const CHANNELS: Channel[] = [
     new Channel(
         'M.I.A.',
         'https://yt3.ggpht.com/gap8M4A3Aqslp_qihbC6pA42WDIX7MBT9Buf9RChhqO7mhhNntge8SQ65w-yw02OeBujNwO5OA=s176-c-k-c0x00ffffff-no-rj',
-        'https://www.youtube.com/channel/UCG4ei7sWX6m2itTEhbWQmuA', 
+        'mia', 
     [ 
         new Video(
             'https://i.ytimg.com/vi/ewRjZoRtu0Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDavvt86fx5V3vnSMQuUT8opBNcTg',

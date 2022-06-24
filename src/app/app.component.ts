@@ -21,15 +21,26 @@ export class AppComponent {
     this.videos = this.shuffleArray(this.videos); 
   }
 
-  onType($event: string): void {
+  onType(type: string): void {
     this.videos = this.extractVideos(this.channels);
-    this.videos = this.videos.filter( v => v.type.toLowerCase().includes($event.toLowerCase()));
+    this.videos = this.videos.filter( v => v.type.toLowerCase().includes(type.toLowerCase()));
   }  
 
-  onSearchQuery($event: string): void {
+  onSearchQuery(query: string): void {
     this.videos = this.extractVideos(this.channels);
-    this.videos = this.videos.filter( v => v.title.toLowerCase().includes($event.toLowerCase()));
+    this.videos = this.videos.filter( v => v.title.toLowerCase().includes(query.toLowerCase()));
   }
+
+  onRoute(route: string): void {
+    this.videos = this.extractVideos(this.channels);
+    this.videos = this.videos.filter( v => v.channel.link.toLowerCase().includes(route.toLowerCase()));
+  }
+
+  // sortVideo(chars: string): void {    
+  //   this.videos = this.extractVideos(this.channels);
+  //   this.videos = this.videos.filter( v => v.title.toLowerCase().includes(chars.toLowerCase()));
+
+  // }
 
   extractVideos(ChannelArray: Channel[]): Video[] {
     return ChannelArray.map( c => c.videos.filter( v => v.channel = c) ).flat(1);
