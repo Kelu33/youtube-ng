@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Channel } from 'src/models/channel.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Channel } from 'src/models/channel.model';
   styleUrls: ['./video-card.component.css']
 })
 export class VideoCardComponent implements OnInit {
+
+  @Output() onRouteChange: EventEmitter<string> = new EventEmitter();
   
   @Input()
   thumbnail: string = '';
@@ -35,6 +37,10 @@ export class VideoCardComponent implements OnInit {
 
   ngOnInit(): void { 
     this.formatThereIs(); 
+  }
+
+  sendChannelRoute(route: string): void {
+    this.onRouteChange.emit(route);
   }
 
   formatThereIs(): void {

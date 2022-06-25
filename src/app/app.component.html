@@ -1,15 +1,16 @@
 <app-header
-[types]="types"
-(onTypeChange)="onType($event)"
-(onSearchQueryChange)="onSearchQuery($event)"
-(onHome)="onHome()"
+    [types]="types"
+    (onTypeChange)="onType($event)"
+    (onSearchQueryChange)="onSearchQuery($event)"
+    (onHome)="onHome()"
 ></app-header>
 
 <app-side-bar
     [channels]="channels"
-    (onRouteChange)="onRoute($event)">
-</app-side-bar>
+    (onRouteChange)="onRoute($event)"
+></app-side-bar>
 
 <app-videos-section
-    [videos]="videos">
-</app-videos-section>
+    [videos]="videos"
+    (onRouteChange)="onRoute($event)"
+></app-videos-section>

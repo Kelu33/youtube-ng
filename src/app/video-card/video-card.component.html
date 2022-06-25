@@ -6,10 +6,12 @@
     <img class="channel-img" [src]="channel.img" [alt]="channel.name">
     
     <div class="info-wrap">
-        <h3 [title]="title">
-            {{ title }} <br>            
-            <a [href]="channel.link" class="channel-link">{{ channel.name }}</a>
-        </h3>
+        <h3 [title]="title">{{ title }}</h3>
+        <a
+        (click)="sendChannelRoute(channel.link)"
+        [routerLink]="'/' + channel.link"
+        [href]="channel.link"
+        >{{ channel.name }}</a>
         <div class="views-wrap">
             <span>{{ nbOfViews }}&nbsp;Views
                 <span *ngIf="!isLive"> . There is {{ thereIs }}</span>

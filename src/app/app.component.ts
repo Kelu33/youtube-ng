@@ -13,7 +13,7 @@ export class AppComponent {
 
   channels: Channel[] = CHANNELS;
 
-  videos: Video[] = this.extractVideos(this.channels);
+  videos: Video[] = this.extractVideosAndSetChannel(this.channels);
 
   types: string[] = [...new Set(this.videos.map( v => v.type))];
 
@@ -22,31 +22,32 @@ export class AppComponent {
   }
 
   onType(type: string): void {
-    this.videos = this.extractVideos(this.channels);
-    this.videos = this.videos.filter( v => v.type.toLowerCase().includes(type.toLowerCase()));
+    this.filterVideos(type, 'type');
   }  
 
   onSearchQuery(query: string): void {
-    this.videos = this.extractVideos(this.channels);
-    this.videos = this.videos.filter( v => v.title.toLowerCase().includes(query.toLowerCase()));
+    this.filterVideos(query, 'title');
   }
 
   onRoute(route: string): void {
-    this.videos = this.extractVideos(this.channels);
-    this.videos = this.videos.filter( v => v.channel.link.toLowerCase().includes(route.toLowerCase()));
+    this.filterVideos(route, 'channel', 'link');
   }
 
   onHome(): void {
-    this.videos = this.shuffleArray(this.extractVideos(this.channels));
+    this.videos = this.shuffleArray(this.extractVideosAndSetChannel(this.channels));
   }
 
-  // sortVideo(chars: string): void {    
-  //   this.videos = this.extractVideos(this.channels);
-  //   this.videos = this.videos.filter( v => v.title.toLowerCase().includes(chars.toLowerCase()));
+  filterVideos(query: string, target: string, targetAlt: string = ''): void {    
+    this.videos = this.extractVideosAndSetChannel(this.channels);
+    if (target === 'title' || target === 'type') {
+      this.videos = this.videos.filter( v => v[target].toLowerCase().includes(query.toLowerCase()));
+    }
+    if (target === 'channel' && targetAlt === 'link') {
+      this.videos = this.videos.filter( v => v[target][targetAlt].toLowerCase().includes(query.toLowerCase()));
+    }
+  }
 
-  // }
-
-  extractVideos(ChannelArray: Channel[]): Video[] {
+  extractVideosAndSetChannel(ChannelArray: Channel[]): Video[] {
     return ChannelArray.map( c => c.videos.filter( v => v.channel = c) ).flat(1);
   }
 

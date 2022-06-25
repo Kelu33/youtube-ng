@@ -22,10 +22,9 @@ export { ROUTES };
 // src: https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
 // author: Eydrian  
 function getChannelsSet(channels: Channel[]): void {
-    channels = channels.filter((value, index, self) =>
-      index === self.findIndex((t) => (
-        t.name === value.name
-      ))
-    )
-  }
-
+  channels = channels.filter((value, index, self) =>
+    index === self.findIndex((t) => (
+      t.name === value.name
+    ))
+  )
+}

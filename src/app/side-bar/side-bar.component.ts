@@ -22,7 +22,6 @@ export class SideBarComponent implements OnInit {
     this.onRouteChange.emit(route);
   }
   
-  // !TODO create global function
   // Remove duplicates Objects in array :
   // src: https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
   // author: Eydrian

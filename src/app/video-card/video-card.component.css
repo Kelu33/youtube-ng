@@ -15,7 +15,6 @@ img {
 }
 
 h3 {
-    margin-bottom: 4px;
     overflow: hidden; /* Limit text length to n lines using CSS */
     text-overflow: ellipsis; /* src: https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
     display: -webkit-box; /* author: Evgeny */
@@ -34,6 +33,7 @@ h3 {
 .views-wrap {
     display: flex;
     justify-content: space-between;
+    transform: translateY(8px);
 }
 
 .over-link {

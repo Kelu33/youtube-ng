@@ -1,4 +1,3 @@
-
 <div class="videos-wrap">
     <app-video-card class="video-wrap" *ngFor="let video of videos"
         [thumbnail]="video.thumbnail"
@@ -7,6 +6,7 @@
         [nbOfViews]="video.nbOfViews"
         [date]="video.date"
         [isLive]="video.isLive"
-        [channel]="video.channel">
-    </app-video-card>
+        [channel]="video.channel"
+        (onRouteChange)="onRoute($event)"
+    ></app-video-card>
 </div>

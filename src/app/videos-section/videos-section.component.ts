@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Video } from 'src/models/video.model';
 
 @Component({
@@ -8,11 +8,17 @@ import { Video } from 'src/models/video.model';
 })
 export class VideosSectionComponent implements OnInit {
 
+  @Output() onRouteChange: EventEmitter<string> = new EventEmitter();
+
   @Input() videos: Video[] = [];
   
   constructor() { }
 
   ngOnInit(): void {
+  }  
+
+  onRoute(route: string): void {
+    this.onRouteChange.emit(route);
   }
 
 }
