@@ -8,6 +8,7 @@
             <input
             (input)="sendSearchQuery(input)"
             [(ngModel)]="input"
+            [routerLink]="'/'"
             type="text" placeholder="Search">
             <button class="submit-button"><span>&#x26B2;</span></button>
         </nav>

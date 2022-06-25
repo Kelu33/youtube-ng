@@ -23,6 +23,7 @@ export class AppComponent {
 
   onType(type: string): void {
     this.filterVideos(type, 'type');
+    this.videos = this.shuffleArray(this.videos);
   }  
 
   onSearchQuery(query: string): void {
