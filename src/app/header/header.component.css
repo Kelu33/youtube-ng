@@ -19,6 +19,10 @@ div {
     z-index: 9;
 }
 
+.home-link:hover {
+    cursor: pointer;
+}
+
 .nav-wrap {
     width: calc(100% - 250px);
     display: flex;

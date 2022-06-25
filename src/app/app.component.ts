@@ -36,6 +36,10 @@ export class AppComponent {
     this.videos = this.videos.filter( v => v.channel.link.toLowerCase().includes(route.toLowerCase()));
   }
 
+  onHome(): void {
+    this.videos = this.shuffleArray(this.extractVideos(this.channels));
+  }
+
   // sortVideo(chars: string): void {    
   //   this.videos = this.extractVideos(this.channels);
   //   this.videos = this.videos.filter( v => v.title.toLowerCase().includes(chars.toLowerCase()));

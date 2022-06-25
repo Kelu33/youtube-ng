@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   @Output() onSearchQueryChange: EventEmitter<string> = new EventEmitter();
 
+  @Output() onHome: EventEmitter<string> = new EventEmitter();
+
   input: string ='';
   
   constructor() { }
@@ -26,6 +28,10 @@ export class HeaderComponent implements OnInit {
 
   sendSearchQuery(searchQuery: string): void {
     this.onSearchQueryChange.emit(searchQuery);
+  }
+
+  home(): void {
+    this.onHome.emit('Home');
   }
 
 
