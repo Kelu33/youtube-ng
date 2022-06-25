@@ -9,7 +9,7 @@ export const CHANNELS: Channel[] = [
     [ 
         new Video(
             'https://i.ytimg.com/vi/V7lHNwP3pes/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDx-OTmYGYeZWsXFrt79OBHV5MfJw',
-            'Joueur du grenier ( Hors-série) - RESIDENT EVIL',
+            'Joueur du grenier ( Hors-série) - RESIDENT EVIL avec un titre super long pour tester le css',
             'https://www.youtube.com/watch?v=V7lHNwP3pes',
             301,
             new Date('6/21/2021'),

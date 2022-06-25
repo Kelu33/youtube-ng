@@ -6,7 +6,7 @@
     <img class="channel-img" [src]="channel.img" [alt]="channel.name">
     
     <div class="info-wrap">
-        <h3>
+        <h3 [title]="title">
             {{ title }} <br>            
             <a [href]="channel.link" class="channel-link">{{ channel.name }}</a>
         </h3>
